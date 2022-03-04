@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularz szkoleniowy</title>
+  </head>
+
+  <body>
+    <form action="https://formspree.io/f/mnqwvbpd" method="POST">
+      <label for="fname">Imię</label><br />
+      <input type="text" name="fname" id="fname" /><br />
+
+      <label for="surname">Nazwisko</label><br />
+      <input type="text" name="surname" id="surname" /><br />
+
+      <label for="email">Mail</label><br />
+      <input type="email" name="email" id="email" /><br />
+
+      <label for="phone">Telefon</label><br />
+      <input type="number" name="phone" id="phone" /><br />
+
+      <select name="city" id="city">
+        <option value="Kraków">Kraków</option>
+        <option value="Warszawa">Warszawa</option>
+        <option value="Gdańsk">Gdańsk</option>
+      </select>
+      <br />
+
+      <label><input type="radio" name="choice" />Mężczyzna </label>
+      <label><input type="radio" name="choice" />Kobieta</label> <br />
+
+      <label
+        ><input type="checkbox" name="agreement" />Wyrażam zgodę na
+        przetwarzanie danych osobowych.
+      </label>
+      <br />
+      <br />
+
+      <label for="message">Wiadomość</label><br />
+      <textarea name="message" id="message"></textarea> <br />
+
+      <input
+        type="submit"
+        name="submit"
+        id="submit"
+        value="Wyślij formularz"
+      /><br />
+    </form>
+  </body>
+</html>
