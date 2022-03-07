@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  color: white;
+  font-family: arial, sans-serif;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+}
+
+.container > * {
+  flex: 1 100%;
+  padding: 1rem;
+}
+
+.header {
+  background-color: rgb(223, 91, 91);
+}
+
+.aside-1 {
+  background-color: rgb(67, 133, 23);
+  flex-basis: 25%;
+}
+
+.aside-2 {
+  background-color: rgb(206, 57, 139);
+  flex-basis: 25%;
+}
+
+article.content {
+  background-color: rgb(68, 68, 68);
+  flex-basis: 50%;
+  height: 300px;
+}
+
+.footer {
+  background-color: rgb(163, 0, 196);
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*//////////////////////// MEDIA QUERIES 768-992 ///////////////////////*/
+/*//////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .aside-1 {
+    order: 3;
+  }
+
+  .aside-2 {
+    order: 2;
+    flex-basis: 25%;
+  }
+
+  article.content {
+    order: 1;
+    flex-basis: 75%;
+  }
+
+  .footer {
+    order: 4;
+  }
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*//////////////////////// MEDIA QUERIES <768 //////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 768px) {
+  .aside-1 {
+    order: 2;
+    flex-basis: 100%;
+  }
+
+  .aside-2 {
+    order: 3;
+  }
+
+  article.content {
+    order: 1;
+  }
+
+  .footer {
+    order: 4;
+  }
+}
