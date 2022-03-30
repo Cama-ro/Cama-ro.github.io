@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: pink;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+.main-nav {
+  background-color: #fff;
+  padding-top: 20px;
+}
+
+.hamburger {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ikonka hamburgera */
+
+input {
+  display: none;
+}
+
+label {
+  position: relative;
+  width: 50px;
+  height: 40px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 1em;
+  transition: all 0.5s;
+  text-align: left;
+}
+
+.hamburger-line,
+.hamburger-line:before,
+.hamburger-line:after {
+  background: #000;
+  position: absolute;
+  height: 5px;
+  width: 50px;
+  border-radius: 4px;
+  transition: all 0.5s;
+  z-index: 9999;
+}
+
+label .hamburger-line:first-child {
+  top: 0px;
+}
+label .hamburger-line:nth-child(2) {
+  top: 10px;
+}
+label .hamburger-line:nth-child(3) {
+  top: 20px;
+}
+
+/* animacja hamburgera */
+
+#menu-1 + label .hamburger-line {
+  transition: top 0.15s 0.17s, transform 0.12s 0.033s;
+}
+
+#menu-1 + label .hamburger-line:nth-child(3) {
+  transition: top 0.15s 0.17s, transform 0.17s;
+}
+
+#menu-1:checked + label .hamburger-line {
+  top: 10px;
+  transform: rotate(135deg);
+  transition: top 0.1s, transform 0.12s 0.1s;
+}
+
+#menu-1:checked + label .hamburger-line:nth-child(3) {
+  transform: rotate(225deg);
+  transition: top 0.1s, transform 0.17s 0.1s;
+}
+
+/* napis menu nad ikonką hamburgera */
+
+.hamburger .menu-text {
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.hamburger .menu-text.open {
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  display: none;
+}
+
+.hamburger .menu-text.close {
+  display: none;
+}
+
+.hamburger .menu-text.close.open {
+  display: block;
+  z-index: 9999;
+}
+
+.main-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  margin: 0;
+  padding-top: 20px;
+  list-style-type: none;
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.main-menu.open {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 999;
+  height: 100vh;
+}
+
+.main-menu .main-menu-item {
+  padding: 5px 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.main-menu .main-menu-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.main-menu .main-menu-item a:hover {
+  text-decoration: underline;
+}
