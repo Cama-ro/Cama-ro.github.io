@@ -1,0 +1,14 @@
+.skills {
+  padding: 50px;
+}
+
+.bg-skill {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
+.fab {
+  font-size: 4.2rem;
+  color: rgb(223, 145, 0);
+}
