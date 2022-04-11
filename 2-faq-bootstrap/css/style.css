@@ -1,0 +1,20 @@
+.faq {
+  padding: 50px;
+}
+
+.btn-link-color {
+  color: rgb(226, 149, 5);
+  text-align: center;
+}
+
+.btn-link-color:hover,
+.btn-link-color:active {
+  color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
